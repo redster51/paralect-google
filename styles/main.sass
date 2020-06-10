@@ -36,10 +36,20 @@ a
     transition: background-color $trans
     cursor: pointer
     &:hover
-        background-color: darken(#4487fb, 3%)
+        background-color: darken(#4487fb, 1%)
 
-    
-#wrapper
+.btn-blue
+    margin-top: 40px
+    display: block
+    color: #64abe9
+    padding: 5px 15px
+    text-align: center
+    transition: background-color $trans
+    border: 1px solid #dadce0
+    &:hover
+        background-color: #f6fafe
+
+.wrapper
     height: 100vh
     width: 100%
     background-color: #ffffff
@@ -48,7 +58,7 @@ a
             display: flex
             align-items: center
             justify-content: flex-end
-            padding: 0 15px
+            padding: 15px 15px
             .menu
                 list-style-type: none
                 >li
@@ -60,7 +70,7 @@ a
                         text-decoration: none
                         border-bottom: 1px solid transparent
                         &:hover
-                            border-color: darken(#5f6368, 3%)
+                            border-color: darken(#5f6368, 1%)
                     &:last-child
                         margin-right: 25px
             >.button
@@ -87,7 +97,7 @@ a
             display: flex
             align-items: center
             margin: 10px 0 30px
-            &:hover
+            &:hover, &:focus-within
                 box-shadow: 0 3px 6px rgba(0, 0, 0, .1)
             #search-svg
                 width: 20px
@@ -134,7 +144,8 @@ a
         .line
             background-color: #f2f2f2
             width: 100%
-            height: 40px
+            min-height: 40px
+            height: auto
             border-top: 1px solid #e4e4e4
             display: -webkit-flex
             display: -ms-flex
@@ -156,7 +167,63 @@ a
                         text-decoration: none
                         border-bottom: 1px solid transparent
                         &:hover
-                            border-color: darken(#5f6368, 3%)
+                            border-color: darken(#5f6368, 1%)
         .first-line
             justify-content: flex-start
             color: #939393
+
+.services-window
+    position: fixed
+    top: 70px
+    right: 25px
+    width: 330px
+    border-radius: 10px
+    background-color: #fff
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2)
+    border: 1px solid transparent
+    overflow-y: auto
+    height: 400px
+    .scroll
+        margin: 5px 4px 5px 0
+        overflow-y: auto
+        height: 400px
+        &::-webkit-scrollbar-track
+            border-radius: 10px
+            background-color: transparent
+        &::-webkit-scrollbar
+            width: 8px
+            height: 8px
+            border-radius: 10px
+            background-color: #dadce0
+        &::-webkit-scrollbar-thumb
+            border-radius: 10px
+            background-color: #dadce0
+    .wrapper
+        padding: 17px 0 20px 12px
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        >a
+            display: block
+            transition: background-color $trans
+            border-radius: 8px
+            padding: 5px
+            margin: 0 5px
+            text-decoration: none
+            width: 24%
+            img
+                border-radius: 50%
+                max-width: 60px
+                margin: 0 auto
+            img, p
+                display: block
+                text-align: center
+            p
+                margin-top: 4px
+                font-size: 14px
+                color: #222222
+
+            &:hover
+                background-color: #f5fafe
+
+        
